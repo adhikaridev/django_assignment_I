@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.m-f{
+  font-family: 'Aclonica', sans-serif;
+  text-transform: uppercase;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+.top-block {
+  background-color: #003459;
+  height: 50vh;
+  text-align: center;
+}
+
+.top-block h1 {
+  padding-top: 20vh;
+}
+
+.top-block p {
+  padding-top: 2%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.second-block {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.second-block a {
+  display: block;
+  color: #49A078;
+  text-decoration: none;
+  margin-bottom: 2%;
+}
+
+.blog-list {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.blog-list ul li {
+  padding-top: 5%;
+}
+
+.blog-list ul li ul li{
+  padding-top: 0;
+}
+
+.blog-list p {
+  padding-top: 1%;
+}
+
+.blog-list {
+  text-align: center;
+  padding-top: 3%;
+}
+
+.bottom-block {
+  padding-bottom: 20vh;
+}
+    </style>
+</head>
+<body>
+  <main>
+    <div class="top-block">
+      <h1>All Blogs</h1>
+    </div>
+    <div class="blog-list">
+      <ul>
+          {% for blog, author_list in blog_and_authors.items %}
+            <li>
+          <h2>{{ blog.topic }}</h2>
+          <p>Created: {{blog.created_at}} </p>
+          <p>Updated: {{blog.updated_at}} </p>
+          <p>Authors:</p>
+            <ul>
+              {% for author in author_list %}
+                <li>
+                    <h4>{{ author }}</h4>
+                </li>
+              {% endfor %}
+            </ul>
+            </li>
+          {% endfor %}
+      </ul>
+    </div>
+    <div class="bottom-block"></div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Authors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.m-f{
+  font-family: 'Aclonica', sans-serif;
+  text-transform: uppercase;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+.top-block {
+  background-color: #003459;
+  height: 50vh;
+  text-align: center;
+}
+
+.top-block h1 {
+  padding-top: 20vh;
+}
+
+.top-block p {
+  padding-top: 2%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.second-block {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.second-block a {
+  display: block;
+  color: #49A078;
+  text-decoration: none;
+  margin-bottom: 2%;
+}
+
+.blog-list {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.blog-list ul li {
+  padding-top: 5%;
+}
+
+.author-list ul li {
+  padding-top: 2%;
+}
+
+.blog-list ul li ul li{
+  padding-top: 0;
+}
+
+.blog-list p {
+  padding-top: 1%;
+}
+
+.blog-list {
+  text-align: center;
+  padding-top: 3%;
+}
+
+.author-list {
+  text-align: center;
+  padding-top: 1%;
+}
+
+.bottom-block {
+  padding-bottom: 20vh;
+}
+
+.contribute {
+  text-align: center;
+  padding-top: 5%;
+}
+    </style>
+</head>
+<body>
+  <main>
+    <div class="top-block">
+      <h1>All Authors</h1>
+    </div>
+    <p class="contribute">All the authors who have contributed to My Blog are:</p>
+    <div class="author-list">
+      <ul>
+          {% for author in authors %}
+                <li> {{ author }} </li>
+          {% endfor %}
+      </ul>
+    </div>
+    <div class="bottom-block"></div>
+  </main>
+
+</body>
+</html>
