@@ -1,82 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
   <title>All Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
-
-*{
-  padding: 0;
-  margin: 0;
-}
-
-.m-f{
-  font-family: 'Aclonica', sans-serif;
-  text-transform: uppercase;
-}
-
-body{
-  background-color: black;
-  color: white;
-}
-
-.top-block {
-  background-color: #003459;
-  height: 50vh;
-  text-align: center;
-}
-
-.top-block h1 {
-  padding-top: 20vh;
-}
-
-.top-block p {
-  padding-top: 2%;
-}
-
-li {
-  list-style-type: none;
-}
-
-.second-block {
-  text-align: center;
-  padding-top: 5%;
-}
-
-.second-block a {
-  display: block;
-  color: #49A078;
-  text-decoration: none;
-  margin-bottom: 2%;
-}
-
-.blog-list {
-  text-align: center;
-  padding-top: 5%;
-}
-
-.blog-list ul li {
-  padding-top: 5%;
-}
-
-.blog-list ul li ul li{
-  padding-top: 0;
-}
-
-.blog-list p {
-  padding-top: 1%;
-}
-
-.blog-list {
-  text-align: center;
-  padding-top: 3%;
-}
-
-.bottom-block {
-  padding-bottom: 20vh;
-}
-    </style>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
   <main>
